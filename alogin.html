@@ -8,7 +8,7 @@
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="-1">
     <title>Internet hotspot - Redirect</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
     <script>
         function startClock() {
             $(if popup == 'true')
@@ -21,14 +21,36 @@
 </head>
 
 <body onLoad="startClock()">
+           <div class="slideshow-container">
+            <!-- START OF GENERAL SLIDES -->
+            <div class="slides fade">
+                <img src="images/ighubimage1.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage2.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage3.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage4.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage5.jpg">
+            </div>
+            <div class = 'overlay'></div>
+            <!-- END OF GENERAL SLIDES -->
+        </div>  
+
     <div class="ie-fixMinHeight">
-        <div class="main">
+        <div class="main gen">
             <div class="wrap">
                 <h1>You are logged in</h1>
                 <p class="info">If nothing happens, click <a href="$(link-redirect)">here</a></p>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>

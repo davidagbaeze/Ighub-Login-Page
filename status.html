@@ -8,7 +8,7 @@ $(endif)
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="expires" content="-1">
 <title>Internet hotspot - Status</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style1.css">
 <script>
 
 $(if advert-pending == 'yes')
@@ -31,8 +31,29 @@ $(endif)
     
 </head>
 <body $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif)>
+            <div class="slideshow-container">
+            <!-- START OF GENERAL SLIDES -->
+            <div class="slides fade">
+                <img src="images/ighubimage1.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage2.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage3.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage4.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage5.jpg">
+            </div>
+            <div class = 'overlay'></div>
+            <!-- END OF GENERAL SLIDES -->
+        </div>  
+
     <div class="ie-fixMinHeight">
-        <div class="main">
+        <div class="main gen">
             <div class="wrap">
                 $(if login-by == 'trial')
                     <h1>Hi, trial user!</h1>
@@ -61,11 +82,12 @@ $(endif)
                     <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
                     <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
                     <!-- end of user manager link -->
-                    <input type="submit" value="Log out">
+                    <input class="btn" type="submit" value="Log out">
                     $(endif)
                 </form>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

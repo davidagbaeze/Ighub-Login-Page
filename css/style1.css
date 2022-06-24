@@ -1,0 +1,499 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: tahoma;
+    align-items: center;
+    
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+} 
+
+.active {
+background-color: #717171;
+}
+
+.slides {
+    display: none;
+    position: absolute;
+}
+
+.slides img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+/* GENERAL SECTION EDITS */
+
+.general{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: top;
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    width: 60%;
+    /* margin: auto; */
+
+}
+
+/* END OF GENERAL SECTION EDITS */
+/* BODY OVERLAY EFFECT BELOW */
+.overlay{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+
+/* BODY LAYOUT EDITS */
+.bodyout{
+    width: 100%;
+    overflow: hidden;
+}
+
+.body::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* GLASS BACKGROUND */
+
+.glass-container{
+    width: 700px;
+    height: 439px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 0px;
+    backdrop-filter: blur(7px);
+    background-color: rgba(5,5,5, 0.173);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 0px rgba(255,255,255,0.4) solid;
+    border-bottom: 0px rgba(40,40,40,0.35) solid;
+    border-right: 0px rgba(40,40,40,0.35) solid;
+}
+/* FORMS FEATURES AND EDITS BELOW */
+form{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.forminner{
+    width: 400px;
+    text-align: center;
+}
+
+form input{
+    position: relative;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 30px;
+    border: none;
+    padding-left: 50px;
+    font-size: 1rem;
+    z-index: 7;
+}
+
+form img{
+    position: absolute;
+    margin: 10px 10px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    z-index: 9;
+}
+
+/* START OF BUTTON EDITS BELOW */
+/* From uiverse.io by @adamgiebl */
+.btn {
+font-family: inherit;
+font-size: 20px;
+background: rgb(8, 8, 8);
+color: white;
+padding: 0.7em 1em;
+padding-left: 0.9em;
+display: flex;
+align-items: center;
+border: none;
+overflow: hidden;
+transition: all 0.2s;
+cursor: pointer;
+width: 400px;
+}
+
+.btn span {
+display: block;
+margin-left: 0.3em;
+transition: all 0.3s ease-in-out;
+}
+
+.btn svg {
+display: block;
+transform-origin: center center;
+transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover .svg-wrapper {
+animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn:hover svg {
+transform: translateX(1.9em) rotate(45deg) scale(1.1);
+}
+
+.btn:hover span {
+transform: translateX(5em);
+}
+
+.btn:active {
+transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+from {
+    transform: translateY(0.1em);
+}
+
+to {
+    transform: translateY(-0.1em);
+}
+}
+
+   
+
+/* BUTTON EDITS END HERE */
+
+/* END OF FORM EDITS HERE */
+
+/* PVC SLIDES EDITS BELOW */
+
+.pvcslides img{
+width: 400px;
+height: 440px
+}
+
+.pvcslides{
+    display: flex;
+    width: 400px;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pvcslidesinner{
+    width: 1000px;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.pvcslidesinner::-webkit-scrollbar{
+    display: none;
+}
+/* END OF PVC SLIDE  */
+
+/* LOGO */
+
+.logo img{
+    width: 200px;
+}
+.logo{
+    position: absolute;
+    top: 70px;
+    right: 40%;
+}
+
+.sectionOne{
+    display: relative;
+}
+
+/* NCDC BUTTON SECTION */
+.inecbtnsection{
+    display: none;
+    position: absolute;
+    bottom: 2px;
+    align-items: center;
+    z-index: 9;
+    animation-name: slidein;
+    animation-duration: 1s;
+}
+
+@keyframes slidein{
+    from{bottom: 20px; opacity: .4; background-color: transparent;}
+    to{bottom: 2px; opacity: 1; background-color: rgba(169, 205, 69, 0.774);}
+}
+
+.inecbtnsection img{
+    position: absolute; 
+    width: 30px;
+    margin: 10px;
+}
+
+#inecbtn:hover{
+    transition: 0.4s ease-in-out;
+    background-color: white;
+    color: grey;
+    font-style: italic;
+
+}
+
+/* rgb(169,205,69); */
+#inecbtn{
+    background-color: rgba(169, 205, 69, 0.774);
+    /* position: relative; */
+    color: black;
+    width: 400px;
+    /* margin: auto; */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-left: 50px;
+}
+/* MEDIA QUERY FOR TABLETS AND IPADS */
+
+/* MOBILE SLIDES EDITS BELOW */
+
+.pvcslidesmobileout{
+    /* visibility: hidden; */
+    display: none;
+    width: 100vw;
+    z-index: 5;
+    height: 100px;
+    position: fixed; 
+    top: 440px;
+    /* right: 40%; */
+}
+
+.slidespvcmobilebtn{
+    margin-left: -46px;
+    width: 420px;
+    align-items: center;
+    z-index: 10;
+}
+
+
+
+#slidespvcmobilebtnid{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 100px;
+    z-index: 10;
+}
+
+
+.pvcslidemobilein{
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.slidespvcmobile img{
+    width: 150px;
+    height: 150px
+}
+
+@media only screen and (max-width: 1230px) {
+    .logo img{
+        width: 100px;
+    }
+
+    .logo{
+        position: absolute;
+        top: 28px;
+        right: 40%;
+        z-index: 6;
+    }
+
+
+    .general{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: top;
+        position: absolute;
+        top: 200px;
+        left: 20%;
+    
+    }
+
+    .glass-container{
+        width: 400px;
+        left: 30px;
+        height: 439px;
+        color: white;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 0px;
+        backdrop-filter: blur(7px);
+        background-color: rgba(5,5,5, 0.173);
+        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+        border: 0px rgba(255,255,255,0.4) solid;
+        border-bottom: 0px rgba(40,40,40,0.35) solid;
+        border-right: 0px rgba(40,40,40,0.35) solid;
+    }
+    form input{
+        width: 300px;
+    }
+
+    #inecbtn{
+    width: 400px;
+    z-index: 9;
+    }
+
+    form button {
+        width: 300px;
+        margin-left: 48px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    
+
+    .pvcslidesmobileout::-webkit-scrollbar{
+        display: none;
+    }
+
+    .pvcslides{
+        display: none;
+    }
+
+    .glass-container{
+        width: 400px;
+        left: 30px;
+        height: 439px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 0px;
+        backdrop-filter: blur(2px);
+        background-color: rgba(5, 5, 5, 0.034);
+        box-shadow: rgba(0, 0, 0, 0.151) 2px 8px 8px;
+        border: 0px rgba(255, 255, 255, 0.164) solid;
+        border-bottom: 0px rgba(40,40,40,0.35) solid;
+        border-right: 0px rgba(40,40,40,0.35) solid;
+    }
+
+    .general{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: top;
+        position: absolute;
+        top: 50px;
+        left: 20%;
+    
+    }
+
+    .pvcslidesmobileout{
+       display: block;
+        width: 100vw;
+        z-index: 1;
+    }
+}
+.ie-fixMinHeight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.main {
+    min-height: calc(100vh - 90px);
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.wrap {
+    margin: auto 40px;
+    padding: 10px;
+    -webkit-transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+@media only screen and (min-width:1px) and (max-width:575px) {
+    .wrap {
+    width: 100%}
+
+}
+@media (max-width:576px) {
+    .wrap {
+    width: 410px;}
+    .slideshow-container{
+        width: 100%;
+    }
+}
+.gen{
+    display: flex;
+    align-items: top;
+    position: absolute;
+    top: 75px;
+    left: 20%;
+    width: 60%;
+    /* margin: auto; */
+}
+@media only screen and (max-width: 1230px) {
+    .gen{
+        display: flex;
+        align-items: top;
+        position: absolute;
+        top: 60px;
+        left: 20%;
+        
+    }
+}
+@media only screen and (max-width: 430px) {
+    .gen{
+        display: flex;
+        align-items: top;
+        position: absolute;
+        top: 17px;
+        left: 2%; 
+    }
+    .btn{
+        width: 200px;
+    }
+    .jj{
+        display: flex;
+        margin-left: 50px;
+        width: 300px;
+    }
+    .slideshow-container{
+        width: 100%;
+        height: 100%;
+    }
+    .wrap{
+        width: 100%;
+    }
+}
+h1, td{
+    color: #fff;
+}

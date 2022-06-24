@@ -5,40 +5,65 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="expires" content="-1">
 <title>Internet hotspot - Log out</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style1.css">
 <script>
     function openLogin() {
-	if (window.name != 'hotspot_logout') return true;
-	open('$(link-login)', '_blank', '');
-	window.close();
-	return false;
+    if (window.name != 'hotspot_logout') return true;
+    open('$(link-login)', '_blank', '');
+    window.close();
+    return false;
     }
 </script>
 </head>
 
 <body>
-    <div class="ie-fixMinHeight">
-        <div class="main">
-            <div class="wrap">
-                <h1>You have just logged out!</h1> 
-                <table>  
-                    <tr><td>Username</td><td>$(username)</td></tr>
-                    <tr><td>IP address</td><td>$(ip)</td></tr>
-                    <tr><td>MAC address</td><td>$(mac)</td></tr>
-                    <tr><td>Session time</td><td>$(uptime)</td></tr>
-                    $(if session-time-left)
-                    <tr><td>Time left</td><td>$(session-time-left)</td></tr>
-                    $(endif)
-                    <tr><td>Bytes up / down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
-                </table>
+
+        <div class="slideshow-container">
+            <!-- START OF GENERAL SLIDES -->
+            <div class="slides fade">
+                <img src="images/ighubimage1.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage2.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage3.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage4.jpg">
+            </div>
+            <div class="slides fade">
+                <img src="images/ighubimage5.jpg">
+            </div>
+            <div class = 'overlay'></div>
+            <!-- END OF GENERAL SLIDES -->
+        </div>  
 
 
-                <form action="$(link-login)" name="login" onSubmit="return openLogin()">
-                <input type="submit" value="Log in">
-                </form>
+        <div class="ie-fixMinHeight">
+            <div class="main gen">
+              <div class="wrap">
+                    <h1>You have just logged out!</h1> 
+                    <table>  
+                        <tr><td>Username</td><td>$(username)</td></tr>
+                        <tr><td>IP address</td><td>$(ip)</td></tr>
+                        <tr><td>MAC address</td><td>$(mac)</td></tr>
+                        <tr><td>Session time</td><td>$(uptime)</td></tr>
+                        $(if session-time-left)
+                        <tr><td>Time left</td><td>$(session-time-left)</td></tr>
+                        $(endif)
+                        <tr><td>Bytes up / down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+                    </table>
+
+
+                    <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+                    <input class ='btn' type="submit" value="Log in">
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
+    
+<script src="main.js"></script>
 
 </body>
 </html>
